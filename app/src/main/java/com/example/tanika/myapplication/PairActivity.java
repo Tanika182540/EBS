@@ -53,7 +53,8 @@ public class PairActivity extends AppCompatActivity {
             @Override
             public void success(Socket socket) {
                 //Intent to joy stick
-                testSend(socket);
+                Storage.setSocket(socket);
+                startActivity(new Intent(PairActivity.this , MainActivity.class));
             }
 
             @Override
@@ -61,6 +62,7 @@ public class PairActivity extends AppCompatActivity {
                 Log.e(TAG , e.getMessage());
             }
         });
+        clientThread.start();
     }
 
     @Override
@@ -68,17 +70,5 @@ public class PairActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pair);
         initWidget();
-    }
-
-    private void testSend(Socket socket){
-        PrintWriter out = null;
-        try {
-            out = new PrintWriter(new BufferedWriter(
-                    new OutputStreamWriter(socket.getOutputStream())),
-                    true);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        out.println("Hello from android app");
     }
 }
