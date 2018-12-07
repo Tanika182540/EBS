@@ -6,8 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".PairActivity">
 
+    <RelativeLayout
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/main_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/main_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter R-Pi IP Addr"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/ip_addr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_label"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:layout_below="@+id/ip_addr"
+            android:layout_centerHorizontal="true"
+            android:text="Connect!"
+            android:id="@+id/select_dev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
     <Button
-        android:id="@+id/btnSkip"
+        android:id="@+id/skip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
