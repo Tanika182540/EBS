@@ -31,11 +31,13 @@
                 android:orientation="horizontal">
 
                 <ImageButton
+                    android:id="@+id/btnUp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:background="@drawable/upload"
-                    android:text="tri" />
+                    android:text="tri"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -45,13 +47,14 @@
                 android:weightSum="3">
 
                 <ImageButton
-
+                    android:id="@+id/btnLeft"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@+id/btnTri"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/back" />
+                    android:background="@drawable/back"
+                    />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -62,13 +65,14 @@
                 </LinearLayout>
 
                 <ImageButton
-
+                    android:id="@+id/btnRight"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_toRightOf="@+id/btnTri"
                     android:layout_weight="1"
-                    android:background="@drawable/next1" />
+                    android:background="@drawable/next1"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -77,12 +81,12 @@
                 android:gravity="center_horizontal">
 
                 <ImageButton
-
+                    android:id="@+id/btnDown"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:background="@drawable/download"
-                    android:text="X" />
+                    />
             </LinearLayout>
 
         </LinearLayout>
@@ -109,7 +113,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:background="@drawable/trianglebutton"
-                    android:text="tri" />
+                    android:text="tri"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -125,7 +130,8 @@
                     android:layout_below="@+id/btnTri"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/squarebutton" />
+                    android:background="@drawable/squarebutton"
+                    />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -136,13 +142,14 @@
                 </LinearLayout>
 
                 <ImageButton
-                    android:id="@+id/btnCir"
+                    android:id="@+id/btnO"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_toRightOf="@+id/btnTri"
                     android:layout_weight="1"
-                    android:background="@drawable/circlebutton" />
+                    android:background="@drawable/circlebutton"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -156,7 +163,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:background="@drawable/crossbutton"
-                    android:text="X" />
+                    />
             </LinearLayout>
 
         </LinearLayout>
@@ -169,6 +176,7 @@
         >
 
         <Button
+            android:id="@+id/btnStart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Start"
@@ -183,6 +191,7 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/btnReset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Reset"
